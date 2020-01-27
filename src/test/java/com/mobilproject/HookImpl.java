@@ -35,7 +35,7 @@ public class HookImpl {
     protected static Selector selector;
 
 
-    @BeforeScenario
+ @BeforeScenario
     public void beforeScenario(ExecutionContext executionContext) throws MalformedURLException {
 
 

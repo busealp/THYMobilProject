@@ -188,10 +188,10 @@ public class StepImpl extends HookImpl {
     }
 
     @Step("<key> elementine <deger> yaz")
-    public void elementeDegerYaz(String key, String deger)throws IOException, GeneralSecurityException {
+    public void elementeDegerYaz(String key, String deger) throws IOException, GeneralSecurityException {
         switch (deger) {
             case "ad":
-                sendKeysToElement(selector.getElementInfoToBy(key), excel.Excel(0) );
+                sendKeysToElement(selector.getElementInfoToBy(key), excel.Excel(0));
                 break;
             case "soyad":
                 sendKeysToElement(selector.getElementInfoToBy(key), excel.Excel(1));
@@ -235,14 +235,14 @@ public class StepImpl extends HookImpl {
     public void sendKeysByKeyNotClear(String key, String text) {
         doesElementExistByKey(key, 5);
         findElementByKey(key).setValue(text);
-   
+
     }
 
     @Step("swipe et")
     public void swipeMethod() {
         if (appiumDriver instanceof IOSDriver) {
             Dimension size = appiumDriver.manage().window().getSize();
-            int x = size.getWidth() -1;
+            int x = size.getWidth() - 1;
             int starty = (int) (size.getHeight() * 0.10);
             int endy = (int) (size.getHeight() * 0.60);
 
@@ -303,5 +303,12 @@ public class StepImpl extends HookImpl {
     public void closeKey() {
         appiumDriver.hideKeyboard();
     }
-}
 
+
+    @Step("deneme")
+    public void implementation1() throws IOException, GeneralSecurityException {
+        System.out.println(excel.Excel(2));
+
+    }
+
+}

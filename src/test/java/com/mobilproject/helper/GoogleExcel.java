@@ -20,9 +20,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GoogleExcel {
-    private  static Sheets sheetsService;
-    private  static String APPLICATION_NAME = "Deneme";
-    private  static String SPREADSHEET_ID = "11647QGuPrGhXGVFtCaDeDmkKkwlDyXt_LyinWz_reIw";
+    private static Sheets sheetsService;
+    private static String APPLICATION_NAME = "Deneme";
+    private static String SPREADSHEET_ID = "11647QGuPrGhXGVFtCaDeDmkKkwlDyXt_LyinWz_reIw";
 
     private static Credential authorize() throws IOException, GeneralSecurityException {
         // Load client secrets.
@@ -30,7 +30,7 @@ public class GoogleExcel {
 
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(
                 JacksonFactory.getDefaultInstance(), new InputStreamReader(in));
-        List<String> scopes= Arrays.asList(SheetsScopes.SPREADSHEETS);
+        List<String> scopes = Arrays.asList(SheetsScopes.SPREADSHEETS);
         // Build flow and trigger user authorization request.
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
                 GoogleNetHttpTransport.newTrustedTransport(), JacksonFactory.getDefaultInstance(),
@@ -42,34 +42,41 @@ public class GoogleExcel {
                 .authorize("user");
         return credential;
     }
-    public static Sheets getSheetsService() throws IOException, GeneralSecurityException{
+
+    public static Sheets getSheetsService() throws IOException, GeneralSecurityException {
         Credential credential = authorize();
         return new Sheets.Builder(GoogleNetHttpTransport.newTrustedTransport(),
-                JacksonFactory.getDefaultInstance(),credential).setApplicationName(APPLICATION_NAME).build();
+                JacksonFactory.getDefaultInstance(), credential).setApplicationName(APPLICATION_NAME).build();
     }
 /*
     public static void main(String[] args) throws IOException,GeneralSecurityException {
         sheetsService = getSheetsService();
-        String range = "congress!A1:F1";
+        String range = "Sayfa1!A1:C2";
 
         ValueRange responce = sheetsService.spreadsheets().values()
                 .get(SPREADSHEET_ID,range)
                 .execute();
         List<List<Object>> values = responce.getValues();
-        System.out.println(values.get(1));
+        for (List row : values){
+            System.out.println(row.get(2));
+        }
+
 
     }
+
 */
-    public String Excel (int i) throws IOException, GeneralSecurityException {
+    public static String Excel(int i) throws IOException, GeneralSecurityException {
         sheetsService = getSheetsService();
-        String range = "Sayfa1!A1:F1";
+        String range = "Sayfa1!A1:C2";
+        String text=null;
 
         ValueRange responce = sheetsService.spreadsheets().values()
-                .get(SPREADSHEET_ID,range)
+                .get(SPREADSHEET_ID, range)
                 .execute();
         List<List<Object>> values = responce.getValues();
-        return values.get(i).toString();
-
+        for (List row : values) {
+             text = row.get(i).toString();
+        }
+        return text;
     }
-
 }
