@@ -1,0 +1,7 @@
+
+# Select from <port> port2
+* Click element by "from"
+* Wait "5" seconds
+* Find element by "portSearchTextInput" and send keys <port>
+* Click element by "portListItem"
+

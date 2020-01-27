@@ -1,0 +1,60 @@
+
+# Giriş yönü bilgileri girilir.
+* "gidisSAW" li elementi bul ve tıkla
+* "gidisSAWYaz" li elementi bul ve "SAW" değerini yaz
+* "gidisSAWYazSec" li elementi bul ve tıkla
+* "dönüsOGU" li elementi bul ve tıkla
+* "dönüsOGU" li elementi bul ve "OGU" değerini yaz
+* "dönüsOGUSec" li elementi bul ve tıkla
+
+# Ekonomik ucuş seçilir.
+* "ucusSec" li elementi bul ve tıkla
+* "ucusSecEkonomik" li elementi bul ve tıkla
+* "ucusSecEkonomikDevam" li elementi bul ve tıkla
+
+# Yolcu bilgileri girilir.
+* "ucusSecEkonomikDevamYolcuEkle" li elementi bul ve tıkla
+* "yolcuAdı" elementine "ad" yaz
+* "yolcuSoyadı" elementine "soyad" yaz
+* "cinsiyetSec" elementine "cinsiyet" yaz
+* "yolcudogumtarihi" li elementi bul ve tıkla
+* "dogumyili" li elementi bul ve tıkla
+* klavye kapat
+* "dogumayi" li elementi bul ve tıkla
+* klavye kapat
+* "dogumgünü" li elementi bul ve tıkla
+* klavye kapat
+* "tarihtamambutonu" li elementi bul ve tıkla
+* "eposta" elementine "eposta" yaz
+* swipe et
+* "tc" elementine "tc" yaz
+* "tcGir" elementine "tcGir" yaz
+* "kaydet" li elementi bul ve tıkla
+
+#Diğer yolcu bilgileri girilir.
+
+* "ikinciYolcuAc" li elementi bul ve tıkla
+* "ikinciYolcuSec" li elementi bul ve tıkla
+* "yolcuAdı" elementine "ad" yaz
+* "yolcuSoyadı" elementine "soyad" yaz
+* "cinsiyetSec" elementine "cinsiyet" yaz
+* "yolcudogumtarihi" li elementi bul ve tıkla
+* "dogumyili" li elementi bul ve tıkla
+* klavye kapat
+* "dogumayi" li elementi bul ve tıkla
+* klavye kapat
+* "dogumgünü" li elementi bul ve tıkla
+* klavye kapat
+* "tarihtamambutonu" li elementi bul ve tıkla
+* "eposta" elementine "eposta" yaz
+* swipe et
+* "tc" elementine "tc" yaz
+* "tcGir" elementine "tcGir" yaz
+* "kaydet" li elementi bul ve tıkla
+
+# Ödeme bilgileri girilir.
+
+* "krediKartiSec" li elementi bul ve tıkla
+* "krediKartiNumarasi" li elementi bul ve tıkla
+* "krediKartiSKT" li elementi bul ve tıkla
+* "krediKartiOnayla" li elementi bul ve tıkla
